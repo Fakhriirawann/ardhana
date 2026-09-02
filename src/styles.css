@@ -1,0 +1,115 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark, .dark *));
+@custom-variant light (&:is(.light, .light *));
+
+@theme inline {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-group-base: #0B2F52;
+  --color-brand: #2563EB;
+
+  --color-digital-500: #8B5CF6;
+  --color-event-500: #F97316;
+  --color-corp-500: #0EA5E9;
+  --color-agency-500: #3B82F6;
+}
+
+/* Dark (default) */
+:root {
+  --radius: 0.75rem;
+  --background: #0B1120;
+  --foreground: #F8FAFC;
+  --card: #111827;
+  --card-foreground: #F8FAFC;
+  --primary: #F8FAFC;
+  --primary-foreground: #0F172A;
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: #2563EB;
+  --accent-foreground: #F8FAFC;
+  --border: rgba(148, 163, 184, 0.14);
+  --input: rgba(148, 163, 184, 0.2);
+  --ring: #2563EB;
+
+  --gradient-group: linear-gradient(120deg, #1E3A8A 0%, #2563EB 50%, #38BDF8 100%);
+  --surface-elevated: rgba(17, 24, 39, 0.85);
+}
+
+/* Light */
+.light {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --primary: #1D4ED8;
+  --primary-foreground: #FFFFFF;
+  --muted: #F1F5F9;
+  --muted-foreground: #475569;
+  --accent: #2563EB;
+  --accent-foreground: #FFFFFF;
+  --border: rgba(15, 23, 42, 0.12);
+  --input: rgba(15, 23, 42, 0.18);
+  --ring: #2563EB;
+
+  --gradient-group: linear-gradient(120deg, #1D4ED8 0%, #2563EB 50%, #0284C7 100%);
+  --surface-elevated: rgba(255, 255, 255, 0.92);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@utility bg-gradient-group { background-image: var(--gradient-group); }
+@utility text-gradient-group {
+  background-image: var(--gradient-group);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility bg-hero-glow {
+  background-image:
+    radial-gradient(55% 55% at 50% 0%, color-mix(in oklab, var(--accent) 18%, transparent) 0%, transparent 70%);
+}
+@utility glass-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+@utility halftone-dots {
+  background-image: radial-gradient(circle, color-mix(in oklab, var(--accent) 30%, transparent) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+}
