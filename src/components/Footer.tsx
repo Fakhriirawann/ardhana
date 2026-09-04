@@ -37,7 +37,7 @@ export function Footer() {
             <a className="h-9 w-9 grid place-items-center rounded-xl glass-card text-muted-foreground hover:bg-muted hover:text-foreground transition border border-border" href="#" aria-label="LinkedIn">
               <InIcon className="w-4 h-4" />
             </a>
-            <a className="h-9 w-9 grid place-items-center rounded-xl glass-card text-muted-foreground hover:bg-muted hover:text-foreground transition border border-border" href="mailto:hello@ardhanagroup.com" aria-label="Email">
+            <a className="h-9 w-9 grid place-items-center rounded-xl glass-card text-muted-foreground hover:bg-muted hover:text-foreground transition border border-border" href="mailto:Corporationardhana@gmail.com" aria-label="Email">
               <Mail className="w-4 h-4" />
             </a>
           </div>
