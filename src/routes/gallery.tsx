@@ -16,7 +16,7 @@ import digitalGapkiTeamReg from "@/assets/gallery/digital-gapki-team-reg.jpeg";
 import digitalGapkiCrew from "@/assets/gallery/digital-gapki-crew.jpeg";
 import digitalGapkiStage from "@/assets/gallery/digital-gapki-stage.jpeg";
 import digitalMouDoremi from "@/assets/gallery/digital-mou-doremi.jpeg";
-import digitalRelawanPajak from "@/assets/gallery/digital-relawan-pajak.jpeg";
+import digitalRelawanPajak from "@/assets/gallery/digital-relawan-pajak.jpeg"
 
 // 2. Ardhana Agency (Promo Parfum Palembang, Mentoring, Creative Team)
 import agencyPromoParfum from "@/assets/gallery/agency-promoparfum.jpeg";
@@ -144,17 +144,17 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     src: agencySprintReview,
-    title: "Review Materi Kampanye Kreatif & Performance",
-    category: "Agency",
-    desc: "Penyelarasan deliverable materi promosi dan strategi digital marketing lintas kanal.",
+    title: "Persiapan Penggunaan GoEvent pada acara Forum GAPKI Andalas",
+    category: "Internal",
+    desc: "Finalisasi dan Demo penggunaan platform GoEvent untuk acara Forum GAPKI Andalas.",
   },
 
   // --- INTERNAL & TIM ARDHANA GROUP ---
   {
     src: internalAmperaNight,
-    title: "Momen Kebersamaan Tim di Jembatan Ampera Palembang",
-    category: "Internal",
-    desc: "Potret kebersamaan tim Ardhana Group dengan latar ikonik Jembatan Ampera di malam hari.",
+    title: "Tim Ardhana Agency melakukan Take Konten untuk Promo Parfum Palembang",
+    category: "Agency",
+    desc: "Potret kebersamaan tim Ardhana Agency ketika take konten untuk kampanye promosi parfum Palembang di jembatan Ampera.",
   },
   {
     src: internalRapatPanitia,
