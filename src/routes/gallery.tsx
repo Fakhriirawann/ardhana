@@ -30,6 +30,9 @@ import internalRapatPanitia from "@/assets/gallery/internal-rapat-panitia.jpeg";
 import internalLearnArdhana from "@/assets/gallery/internal-learn-ardhana.jpeg";
 import internalDigicrewGroup from "@/assets/gallery/internal-digicrew-group.jpeg";
 import internalPlanningSession from "@/assets/gallery/internal-planning-session.jpeg";
+import internalDiesNatalisPolsri from "@/assets/gallery/internal-ardhana-diesnatalis-polsri.jpeg";
+import agencyExpoStandArdhana from "@/assets/gallery/agency-expo-stand-ardhana.jpeg";
+import internalLearnDigicrewSession from "@/assets/gallery/internal-learn-digicrew-session.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -179,6 +182,24 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     title: "Sesi Diskusi Strategis & Perencanaan Tim",
     category: "Internal",
     desc: "Pertemuan koordinasi terarah untuk merumuskan milestone proyek dan eksekusi tim.",
+  },
+  {
+    src: internalDiesNatalisPolsri,
+    title: "Kolaborasi Photobooth Ardhana Agency & F&D Design Creative (Dies Natalis Polsri ke-44)",
+    category: "Agency",
+    desc: "Ardhana Agency bekerja sama dengan F&D Design Creative membuka photobooth interaktif pada perayaan Dies Natalis Politeknik Negeri Sriwijaya ke-44 Tahun.",
+  },
+  {
+    src: agencyExpoStandArdhana,
+    title: "Stand Pameran & Kreatif Ardhana Agency bersama F&D Design Creative",
+    category: "Agency",
+    desc: "Stan pameran kolaboratif Ardhana Agency bersama F&D Design Creative menampilkan portofolio kreatif, layanan photobooth, dan ekosistem holding.",
+  },
+  {
+    src: internalLearnDigicrewSession,
+    title: "Workshop: Let's Learn Together With Ardhana & DigiCrew",
+    category: "Internal",
+    desc: "Sesi pelatihan dan kolaborasi edukatif bersama talenta muda dalam program pengembangan kapabilitas tim DigiCrew.",
   },
 ];
 

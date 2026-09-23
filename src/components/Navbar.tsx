@@ -88,7 +88,7 @@ export function Navbar() {
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
                 }`}
               >
-                <span>Anak Perusahaan</span>
+                <span>Perusahaan</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
                     desktopCompaniesOpen ? "rotate-180" : ""
@@ -209,7 +209,7 @@ export function Navbar() {
                         <div className="h-7 w-7 rounded-lg bg-blue-600/10 text-blue-600 dark:text-sky-400 grid place-items-center">
                           <Building2 className="w-4 h-4" />
                         </div>
-                        <span>Anak Perusahaan</span>
+                        <span>Perusahaan</span>
                       </div>
                       <ChevronDown
                         className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${

@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { companies } from "@/data/companies";
 import { Mail, MapPin } from "lucide-react";
 import groupLogo from "@/assets/ardhana-group.png";
+import weboraIcon from "@/assets/webora-icon.png";
 
 const IgIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -72,9 +73,26 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="max-w-7xl mx-auto px-6 py-5 text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-6 py-5 text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-between gap-3">
           <p>© {new Date().getFullYear()} Ardhana Group. All rights reserved.</p>
-          <p>Built with care in Indonesia.</p>
+          <div className="flex items-center gap-2">
+            <span>Made with care by</span>
+            <a
+              href="https://webora-studio-phi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-muted/70 border border-border text-foreground font-medium shadow-xs hover:border-primary/50 hover:bg-muted transition group"
+            >
+              <img
+                src={weboraIcon}
+                alt="Webora Studio"
+                className="h-4 w-4 rounded-full object-cover ring-1 ring-border shrink-0 group-hover:scale-105 transition-transform"
+              />
+              <span className="font-semibold text-xs tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-sky-400 dark:to-indigo-300 bg-clip-text text-transparent group-hover:opacity-90">
+                Webora Studio
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
