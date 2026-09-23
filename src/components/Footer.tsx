@@ -66,7 +66,7 @@ export function Footer() {
             <li><Link to="/terms" className="hover:text-foreground transition">Syarat & Ketentuan</Link></li>
             <li className="pt-4 flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-              <span>Jakarta, Indonesia</span>
+              <span>Palembang, Indonesia</span>
             </li>
           </ul>
         </div>
