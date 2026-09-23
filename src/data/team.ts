@@ -32,13 +32,13 @@ export const executiveLeadership: TeamMember[] = [
 export const managingDirectors: TeamMember[] = [
   {
     name: "Fakhri Irawan",
-    role: "Managing Director",
+    role: "Managing Director Ardhana Digital",
     level: "Operational Leadership",
     photo: fakhriPhoto,
   },
   {
     name: "Chania",
-    role: "Managing Director",
+    role: "Managing Director Ardhana Agency",
     level: "Operational Leadership",
     photo: chaniaPhoto,
   },
