@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { companies, groupValues } from "@/data/companies";
-import { leadership, heads } from "@/data/team";
+import { executiveLeadership, managingDirectors, divisionHeads } from "@/data/team";
 import groupLogo from "@/assets/ardhana-group.png";
 
 import aboutAmperaTeam from "@/assets/gallery/internal-ampera-night.jpeg";
@@ -251,49 +251,116 @@ function About() {
 
       {/* Leadership / Team */}
       <section className="max-w-7xl mx-auto px-6 py-16">
-        <SectionHeading center eyebrow="Struktur Kepemimpinan" title="Orang-orang di balik Ardhana Group." desc="Tim inti yang mengarahkan strategi grup dan setiap unit bisnis." />
+        <SectionHeading
+          center
+          eyebrow="Struktur Kepemimpinan"
+          title="Bagan Kepemimpinan & Manajemen."
+          desc="Struktur kepemimpinan profesional yang mengarahkan strategi holding dan operasional unit bisnis Ardhana Group."
+        />
 
-        <div className="mt-12">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center">Board of Directors</div>
+        {/* Tier 1: Executive Board */}
+        <div className="mt-14">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-600 dark:bg-sky-400" />
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+              Executive Leadership
+            </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-600 dark:bg-sky-400" />
+          </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {leadership.map((m, i) => (
+            {executiveLeadership.map((m, i) => (
               <motion.div
-                key={m.name + i}
+                key={m.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="glass-card rounded-2xl p-6 text-center border border-border shadow-sm"
+                className="glass-card rounded-3xl p-6 sm:p-7 text-center border border-border shadow-md hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="mx-auto mb-4 h-28 w-28 rounded-full overflow-hidden ring-2 ring-border">
-                  <img src={m.photo} alt={m.name} className="h-full w-full object-cover" />
+                <div className="mx-auto mb-5 h-44 w-44 sm:h-48 sm:w-48 rounded-2xl overflow-hidden ring-1 ring-border shadow-md bg-gradient-to-b from-blue-500/10 to-muted/60">
+                  <img
+                    src={m.photo}
+                    alt={m.name}
+                    className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <div className="font-semibold text-lg text-foreground">{m.name}</div>
-                <div className="text-sm text-muted-foreground">{m.role}</div>
-                <div className="mt-2 inline-block text-[10px] uppercase tracking-widest text-gradient-group font-semibold">Ardhana {m.unit}</div>
+                <div className="font-bold text-xl text-foreground tracking-tight mb-1">{m.name}</div>
+                <div className="text-sm font-semibold text-blue-600 dark:text-sky-400">{m.role}</div>
+                <div className="mt-3 inline-block text-[11px] font-medium px-3 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
+                  {m.level}
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        <div className="mt-14">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center font-semibold">Managing Directors</div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {heads.map((m, i) => (
+        {/* Tier 2: Managing Directors */}
+        <div className="mt-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400" />
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+              Managing Directors
+            </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400" />
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {managingDirectors.map((m, i) => (
               <motion.div
-                key={m.name + i}
+                key={m.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="glass-card rounded-2xl p-6 text-center border border-border shadow-sm"
+                className="glass-card rounded-3xl p-6 sm:p-7 text-center border border-border shadow-md hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="mx-auto mb-4 h-24 w-24 rounded-full overflow-hidden ring-2 ring-border">
-                  <img src={m.photo} alt={m.name} className="h-full w-full object-cover" />
+                <div className="mx-auto mb-5 h-44 w-44 sm:h-48 sm:w-48 rounded-2xl overflow-hidden ring-1 ring-border shadow-md bg-gradient-to-b from-cyan-500/10 to-muted/60">
+                  <img
+                    src={m.photo}
+                    alt={m.name}
+                    className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <div className="font-semibold text-foreground">{m.name}</div>
-                <div className="text-sm text-muted-foreground">{m.role}</div>
-                <div className="mt-2 inline-block text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Ardhana {m.unit}</div>
+                <div className="font-bold text-xl text-foreground tracking-tight mb-1">{m.name}</div>
+                <div className="text-sm font-semibold text-blue-600 dark:text-sky-400">{m.role}</div>
+                <div className="mt-3 inline-block text-[11px] font-medium px-3 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
+                  {m.level}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tier 3: Division Heads */}
+        <div className="mt-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+              Division Leadership
+            </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {divisionHeads.map((m, i) => (
+              <motion.div
+                key={m.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="glass-card rounded-3xl p-6 sm:p-7 text-center border border-border shadow-md hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="mx-auto mb-5 h-44 w-44 sm:h-48 sm:w-48 rounded-2xl overflow-hidden ring-1 ring-border shadow-md bg-gradient-to-b from-indigo-500/10 to-muted/60">
+                  <img
+                    src={m.photo}
+                    alt={m.name}
+                    className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="font-bold text-xl text-foreground tracking-tight mb-1">{m.name}</div>
+                <div className="text-sm font-semibold text-blue-600 dark:text-sky-400">{m.role}</div>
+                <div className="mt-3 inline-block text-[11px] font-medium px-3 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
+                  {m.level}
+                </div>
               </motion.div>
             ))}
           </div>

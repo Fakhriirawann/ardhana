@@ -1,43 +1,66 @@
+import zulfaniPhoto from "@/assets/team/Zulfani.png";
+import riaPhoto from "@/assets/team/Ria.jpeg";
+import fakhriPhoto from "@/assets/team/Fakhri Irawan.png";
+import chaniaPhoto from "@/assets/team/Chania.png";
+import nabilaPhoto from "@/assets/team/Nabila Nur Aisyah.png";
+import ariqahPhoto from "@/assets/team/Ariqah.jpeg";
+
 export interface TeamMember {
   name: string;
   role: string;
-  unit: "Group" | "Digital" | "Event" | "Agency";
+  level: string;
   photo: string;
 }
 
-// Dummy team data — silakan ganti nama, jabatan, dan foto sesuai kebutuhan.
-export const leadership: TeamMember[] = [
+// 1. Executive Board
+export const executiveLeadership: TeamMember[] = [
   {
-    name: "Nama Founder",
-    role: "Founder & CEO",
-    unit: "Group",
-    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop",
+    name: "Zulfani",
+    role: "Founder - CEO",
+    level: "Executive Board",
+    photo: zulfaniPhoto,
   },
   {
-    name: "Nama Co-Founder",
-    role: "Co-Founder & COO",
-    unit: "Group",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop",
+    name: "Ria Pratiwi",
+    role: "General Manager",
+    level: "General Management",
+    photo: riaPhoto,
   },
 ];
 
-export const heads: TeamMember[] = [
+// 2. Managing Directors
+export const managingDirectors: TeamMember[] = [
   {
-    name: "Nama Direktur Digital",
+    name: "Fakhri Irawan",
     role: "Managing Director",
-    unit: "Digital",
-    photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=600&fit=crop",
+    level: "Operational Leadership",
+    photo: fakhriPhoto,
   },
   {
-    name: "Nama Direktur Event",
+    name: "Chania",
     role: "Managing Director",
-    unit: "Event",
-    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=600&fit=crop",
-  },
-  {
-    name: "Nama Direktur Agency",
-    role: "Managing Director",
-    unit: "Agency",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=600&fit=crop",
+    level: "Operational Leadership",
+    photo: chaniaPhoto,
   },
 ];
+
+// 3. Division Heads
+export const divisionHeads: TeamMember[] = [
+  {
+    name: "Nabila Aisyah",
+    role: "Head of Business Development Division",
+    level: "Division Leadership",
+    photo: nabilaPhoto,
+  },
+  {
+    name: "Ariqah Shabila Putri",
+    role: "Head of Finance & Administration Division",
+    level: "Division Leadership",
+    photo: ariqahPhoto,
+  },
+];
+
+// Backward compatibility exports if needed
+export const leadership = executiveLeadership;
+export const heads = managingDirectors;
+
