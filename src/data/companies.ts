@@ -225,9 +225,9 @@ export const companies: Company[] = [
 export const getCompany = (slug: string) => companies.find((c) => c.slug === slug);
 
 export const groupStats = [
-  { value: 12, suffix: "+", label: "Tahun Pengalaman" },
-  { value: 250, suffix: "+", label: "Proyek Terselesaikan" },
-  { value: 80, suffix: "+", label: "Mitra & Klien Korporat" },
+  { value: 1, suffix: "+", label: "Tahun Pengalaman" },
+  { value: 40, suffix: "+", label: "Proyek Terselesaikan" },
+  { value: 15, suffix: "+", label: "Mitra & Klien Korporat" },
   { value: 3, suffix: "", label: "Pilar Unit Bisnis" },
 ];
 
@@ -252,14 +252,6 @@ export const groupValues = [
 
 export const partners = [
   "GAPKI (Gabungan Pengusaha Kelapa Sawit)",
-  "BPDPKS",
-  "Sinarmas",
-  "Pertamina Lubricants",
-  "United Tractors",
-  "Bank Mandiri",
-  "Bank BNI",
-  "Bank Syariah Indonesia (BSI)",
-  "Bank Sumsel Babel",
   "Direktorat Jenderal Pajak (DJP)",
   "Doremi",
   "Promo Parfum Palembang",
