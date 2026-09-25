@@ -109,15 +109,15 @@ function Home() {
             {/* Quick trust metrics */}
             <div className="mt-12 pt-8 border-t border-border grid grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <div className="text-2xl sm:text-3xl font-bold font-display text-foreground">12<span className="text-[#2563EB] dark:text-[#38BDF8]">+</span></div>
+                <div className="text-2xl sm:text-3xl font-bold font-display text-foreground">1<span className="text-[#2563EB] dark:text-[#38BDF8]">+</span></div>
                 <div className="text-xs text-muted-foreground mt-1">Tahun Pengalaman</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold font-display text-foreground">250<span className="text-[#2563EB] dark:text-[#38BDF8]">+</span></div>
+                <div className="text-2xl sm:text-3xl font-bold font-display text-foreground">40<span className="text-[#2563EB] dark:text-[#38BDF8]">+</span></div>
                 <div className="text-xs text-muted-foreground mt-1">Proyek Terselesaikan</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold font-display text-foreground">80<span className="text-[#2563EB] dark:text-[#38BDF8]">+</span></div>
+                <div className="text-2xl sm:text-3xl font-bold font-display text-foreground">15<span className="text-[#2563EB] dark:text-[#38BDF8]">+</span></div>
                 <div className="text-xs text-muted-foreground mt-1">Mitra Korporat</div>
               </div>
             </div>
